@@ -87,7 +87,7 @@ until [ $gtg -eq 1 ]; do
   ./install.sh
   cd ~/Desktop
   git clone https://github.com/PowerShellMafia/PowerSploit.git
-  git clone https://github.com/fireeye/SessionGopher.git
+  git clone https://github.com/BloodHoundAD/BloodHound.git
   gtg=1
  elif [ $pick == "n" ] || [ $pick == "N" ]; then
   echo "Skipping Windows stuff install..."
